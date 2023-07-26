@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+* {
+    margin: 0;
+    padding-left: 0;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #5372F0;
+}
+
+.wrapper {
+    background-color: white;
+    max-width: 450px;
+    border-radius: 7px;
+    height: 280px;
+    transition: height 0.2s ease;
+}
+
+.wrapper.active {
+    height:525px;
+}
+header h2{
+    font-size: 25px;
+    font-weight: 500;
+    padding: 18px 25px ;
+    border-bottom: 1px solid #ccc;
+}
+
+header p{
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.form {
+    margin: 25px 20px 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form input{
+    width: 100%;
+    height: 60px;
+    outline:none;
+    font-size: 18px;
+    padding: 0 16px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.form button {
+    opacity: 1;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 0;
+    font-size: 17px;
+    border-radius: 5px;
+    width: calc(100% / 1.5 - 0px);
+    background-color: #5372F0;
+    margin-top: 15px;
+    margin-left: 70px;
+}
+
+.qr-code {
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin-top: 20px;
+}
+
+.buttons button{
+    width: 130px;
+    font-size: 17px;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.buttons .close {
+    background-color: red;
+}
+
+.buttons .save {
+    background-color: green;
+}
+
+.wrapper .qr-code {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.wrapper .buttons {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.wrapper.active .qr-code {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s ease;
+}
+
+.wrapper.active .buttons{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s ease;
+}
